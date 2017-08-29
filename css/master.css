@@ -1,0 +1,499 @@
+/******************************************************************************
+                        Author: Helen Do
+                        Website: www.helendo.com
+                        Version: 1.0
+                        Date: 08/28/2017
+******************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+/* ------------------------------
+GLOBAL CSS
+------------------------------ */
+body {
+    /* General CSS */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+    text-transform: uppercase;
+}
+p {
+    text-align: justify;
+    margin: 0 0 1rem 0;
+}
+
+.grow {
+  -webkit-transition:all 0.5s ease-out;
+  -moz-transition:all 0.5s ease-out;
+  -ms-transition:all 0.5s ease-out;
+  -o-transition:all 0.5s ease-out;
+  transition:all 0.5s ease-out;
+}
+
+.grow:hover {
+  -webkit-transform:scale(1.3);
+  -moz-transform:scale(1.3);
+  -ms-transform:scale(1.3);
+  -o-transform:scale(1.3);
+  transform:scale(1.3);
+}
+
+.fade-out {
+  -webkit-transition:opacity .5s ease-out;
+  -moz-transition:opacity .5s ease-out;
+  -ms-transition:opacity .5s ease-out;
+  -o-transition:opacity .5s ease-out;
+  transition:opacity .5s ease-out;
+}
+
+.fade-out:hover {
+  opacity:0.2;
+}
+/* -----------------------------
+NAVIGATION
+----------------------------- */
+nav.main-nav {
+    /* General CSS */
+    background: rgb(213,186,49);
+    overflow: hidden;
+    /* Transition */
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+    /* Dimensions */
+    width: 100%;
+    height: 108px;
+    /* Position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+a.nav-title {
+    padding: 12px;
+    /* General CSS */
+    line-height: 108px;
+    color: rgb(96,94,94);
+    font-size: 2.4rem;
+    font-weight: 600;
+    /* Transition */
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.nav-wrapper {
+    margin: 0 auto;
+    padding: 0;
+    /* Position */
+    float: right;
+}
+a.nav-link {
+    margin-right: 20px;
+    /* General CSS */
+    line-height: 108px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    /* Transition */
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+/* Scroll Screen */
+nav.main-nav.smaller {
+    height: 75px;
+}
+nav.main-nav.smaller a.nav-title {
+    line-height: 75px;
+    font-size: 2rem;
+}
+nav.main-nav.smaller .nav-wrapper {
+    text-align: center;
+}
+nav.main-nav.smaller a.nav-link {
+    line-height: 75px;
+    font-size: 16px;
+}
+/*    MOBILE & TABLET SCREENS
+-------------------------------- */
+@media all and (max-width: 915px) {
+
+    a.nav-title {
+        padding: 12px;
+        /* General CSS */
+        line-height: 50px;
+        font-size: 20px;
+    }
+    .nav-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        height: 58px;
+        /* General CSS */
+        text-align: center;
+    }
+    a.nav-link {
+        margin: 0 10px;
+        /* General CSS */
+        line-height: 58px;
+        font-size: 12px;
+    }
+    /* Scroll Screen */
+    nav.main-nav.smaller {
+        background: lightseagreen;
+    }
+    nav.main-nav.smaller a.nav-link {
+        line-height: 75px;
+        font-size: 8px;
+    }
+}
+@media all and (max-width: 415px) {
+    /* Scroll Screen */
+    nav.main-nav.smaller a.nav-title {
+        font-size: 1em;
+    }
+}
+/* -------------------------------
+HEADER
+------------------------------- */
+header.masthead {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    /* General CSS */
+    background: rgb(238,238,238);
+    text-align: center;
+    line-height: 2.5;
+}
+img.header-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 25%;
+}
+span.welcome {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-style: italic;
+    font-weight: 200;
+}
+span.job-title {
+    font-size: 32px;
+}
+/*    MOBILE & TABLET SCREENS - HEADER
+------------------------------------------- */
+@media all and (max-width: 768px) {
+    header.masthead {
+        padding-top: 158px;
+        padding-bottom: 50px;
+        /* General CSS */
+        line-height: 1.5;
+    }
+    span.welcome {
+        font-size: 2em;
+    }
+    span.job-title {
+        font-size: 1em;
+    }
+}
+/* -------------------------------
+MAIN CONTENT
+------------------------------- */
+main {
+    /* General CSS */
+    background: rgb(156,212,222);
+    /* Position */
+    clear: both;
+    float: none;
+}
+h2.text-center {
+    margin-bottom: 55px;
+    text-align: center;
+    font-size: 48px;
+    color: #fff;
+}
+/*********************************
+PROJECTS
+**********************************/
+section.projects {
+    padding: 100px 0;
+    /* General CSS */
+    background: rgb(137,158,174);
+}
+.projects-wrapper {
+    /* Position CSS */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.projects-item {
+    padding: 10px;
+}
+img.project-img {
+    width: 350px;
+    height: 200px;
+}
+/*********************************
+ABOUT
+**********************************/
+section.about {
+    padding: 100px 0;
+    background: rgb(155,218,239);
+}
+.about-wrapper {
+    /* Position CSS */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.about-text-block {
+    width: 80%;
+}
+.about-text-block p {
+    font-size: 20px;
+}
+/*    MOBILE & TABLET SCREENS - ABOUT
+------------------------------------------ */
+@media all and (max-width: 400px) {
+    .about-text-block {
+        width: 90%;
+    }
+    .about-text-block p {
+        text-align: left;
+    }
+}
+/*********************************
+CONTACT
+**********************************/
+section.contact {
+    padding: 100px 0;
+    /* General CSS */
+    background: rgb(33,205,178);
+}
+.form-container {
+    margin: 0 auto;
+    max-width: 600px;
+    /* General CSS */
+    background:#FAFAFA;
+    text-align: center;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.head {
+    -webkit-border-radius:6px 6px 0px 0px;
+    -moz-border-radius:6px 6px 0px 0px;
+    border-radius:6px 6px 0px 0px;
+    background: rgb(155,218,239);
+    color:#FAFAFA;
+}
+h3.form-head {
+    padding: 18px 0;
+    font-size: 1.4em;
+}
+input {
+    margin-bottom: 10px;
+}
+textarea {
+    margin-bottom: 10px;
+    height: 100px;
+}
+input:first-of-type {
+    margin-top: 35px;
+}
+input, textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 15px 10px 10px;
+    /* General CSS */
+    font-size: 1em;
+    border: 1px solid rgb(207, 207, 207);
+    /* Position CSS */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input.empty, textarea.empty {
+    background: rgb(255, 182, 193);
+}
+
+::-webkit-input-placeholder {
+    color: #FAFAFA;
+}
+:-moz-placeholder {
+    color: #FAFAFA;
+}
+::-moz-placeholder {
+    color: #FAFAFA;
+}
+:-ms-input-placeholder {
+    color: #FAFAFA;
+}
+button {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding: 12px 45px;
+    width: 30%;
+    /* General CSS */
+    background: rgb(155,218,239);
+    font-size: 1em;
+    color:#fff;
+    cursor: pointer;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(155,218,239);
+    -webkit-transition: .5s;
+    transition: .5s;
+    /* Position CSS */
+    display: inline-block;
+}
+button:hover, .button:hover {
+    background: rgb(139, 203, 235);
+}
+label.error {
+    margin:auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+    /* General CSS */
+    background-color:rgb(215, 155, 155);
+    color: #FAFAFA;
+    font-size: 1em;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    /* Position CSS */
+    display: block;
+}
+/*    MOBILE & TABLET SCREENS - CONTACT FORM
+-------------------------------------------------- */
+@media all and (max-width: 700px) {
+    input, textarea, button, label.error {
+        width: 90%;
+    }
+}
+.message {
+    margin: auto;
+    padding: 10px 0;
+    width: 80%;
+    /* General CSS */
+    background-color: rgb(155,218,239);
+    color: #FAFAFA;
+    font-size: 1.1em;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    /* Position CSS */
+    display: none;
+}
+/* -------------------------------
+FOOTER
+------------------------------- */
+footer.text-center {
+    background: rgb(243,237,234);
+}
+.footer-wrapper {
+    /* Position */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.footer-col {
+    width: 30%;
+    text-align: center;
+}
+
+h3.footer-head {
+    margin: 1em 0;
+}
+/*    MOBILE & TABLET SCREENS - FOOTER
+-----------------------------------------*/
+@media all and (max-width: 1215px) {
+    .footer-col {
+        width: 80%;
+    }
+}
+@media all and (max-width: 400px) {
+    .footer-col {
+        width: 90%;
+    }
+}
+/* Card 1 */
+.footer-text-block {
+    margin: 0 auto;
+    width: 90%;
+}
+img.footer-profile {
+    width: 200px;
+    height: 200px;
+}
+/* Card 2 */
+a.contact-link {
+    padding: 12px;
+    /* General CSS */
+    line-height: 108px;
+    color: rgb(96,94,94);
+    font-size: 2em;
+    /* Transition */
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+a.contact-link:hover {
+    color: #fff;
+}
+/* Card 3 */
+.block-link {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+a.f-btn {
+    margin: 0.5em;
+    cursor: pointer;
+}
+a.f-btn:hover {
+    background: rgb(214,186,50);
+}
+a.template-download {
+    padding: 1em;
+    background: rgb(245,223,65);
+}
+a.template-link {
+    padding: 1em 2.1em;
+    background: rgb(245,223,65);
+}
+/* Footer Below */
+section.footer-below {
+    padding-top: 16px;
+    padding-bottom: 1px;
+    /* General CSS */
+    background: rgb(255, 182, 193);
+}
+p.f-copyright {
+    text-align: center;
+    color: #fff;
+}
